@@ -1,0 +1,31 @@
+#Everything is case sensetive
+#The name of the action
+name: A basic Flow
+
+#What it does the action
+on: push
+
+#What it does
+jobs:
+  #Individual jobs/actions for it to do
+  job1:
+    name: First job to run
+    #The os/system it runs on
+    runs-on: ubuntu-latest
+    #The steps the action follows
+    steps:
+      - name: Step one
+        #What the job uses
+        uses: actions/checkout@v4
+      - name: Step two
+        #A command the job runs
+        run: ls -la
+  job2:
+    name: Second job to run
+    runs-on: windows-latest
+    steps:
+      - name: Step one of job2
+        uses: actions/checkout@v4
+      - name: Step two of job2
+      # d
+        run: pwd
